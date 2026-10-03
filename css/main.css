@@ -1,21 +1,22 @@
 :root {
   color-scheme: dark;
-  --color-bg: #0b1020;
-  --color-bg-elevated: #10182a;
-  --color-surface: #121c30;
-  --color-surface-raised: #17233a;
-  --color-text: #f3f6ff;
-  --color-text-secondary: #a5b0c6;
-  --color-muted: #7e8ba5;
-  --color-accent: #9d8cff;
-  --color-accent-blue: #69a8ff;
-  --color-accent-bright: #c2b8ff;
-  --color-border: rgb(173 190 225 / 14%);
-  --color-border-strong: rgb(173 190 225 / 25%);
+  --color-bg: #0d0e12;
+  --color-bg-elevated: #16181f;
+  --color-surface: #16181f;
+  --color-surface-raised: #1d2029;
+  --color-text: #f1f3f9;
+  --color-text-secondary: #94a3b8;
+  --color-muted: #7d8799;
+  --color-accent: #8b5cf6;
+  --color-accent-blue: #8b5cf6;
+  --color-accent-bright: #a78bfa;
+  --color-border: #262936;
+  --color-border-strong: #383b49;
   --shadow-card: 0 18px 50px rgb(0 0 0 / 24%);
-  --gradient-accent: linear-gradient(105deg, #79b8ff 0%, #b59bff 57%, #f0a8e7 100%);
-  --font-body: "DM Sans", "Segoe UI", sans-serif;
-  --font-heading: "Space Grotesk", "Segoe UI", sans-serif;
+  --shadow-accent: 0 8px 24px rgb(139 92 246 / 18%);
+  --gradient-accent: linear-gradient(105deg, #8b5cf6, #a78bfa);
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-heading: "Inter", "Segoe UI", sans-serif;
   --container-width: 1120px;
   --header-height: 78px;
 }
@@ -51,7 +52,6 @@ body {
   min-width: 320px;
   margin: 0;
   background:
-    radial-gradient(ellipse at 72% 8%, rgb(82 74 175 / 13%), transparent 34rem),
     var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
@@ -94,7 +94,7 @@ svg {
 }
 
 ::selection {
-  background: rgb(157 140 255 / 35%);
+  background: rgb(139 92 246 / 35%);
   color: var(--color-text);
 }
 
@@ -224,9 +224,9 @@ svg {
   width: 34px;
   height: 34px;
   place-items: center;
-  border: 1px solid rgb(170 151 255 / 45%);
+  border: 1px solid rgb(167 139 250 / 34%);
   border-radius: 10px;
-  background: rgb(157 140 255 / 12%);
+  background: rgb(139 92 246 / 9%);
   color: var(--color-accent-bright);
   font-size: 0.75rem;
   letter-spacing: -0.04em;

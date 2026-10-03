@@ -23,10 +23,11 @@ Portafolio personal de Ángel Orlando Briceño Chacón, desarrollador frontend e
 ## Decisiones de diseño y rendimiento
 
 - Diseño mobile-first, con HTML semántico, navegación por teclado y estados accesibles para controles.
+- Tema oscuro con fondo `#0d0e12`, superficies `#16181f` y acento morado reservado para estados activos, iconos y llamadas a la acción; el tema claro sigue disponible.
 - El tema inicial respeta la preferencia del sistema; la selección manual se guarda en `localStorage`.
 - La búsqueda y los filtros funcionan en el navegador, sin dependencias ni solicitudes adicionales.
 - Las animaciones de entrada usan `IntersectionObserver` y respetan `prefers-reduced-motion`.
-- CSS, JavaScript y recursos están separados; las fuentes se sirven desde Google Fonts y el sitio no requiere un proceso de compilación.
+- La tarjeta de Interclases usa un icono SVG y tipografía, no imágenes ilustrativas. CSS, JavaScript y recursos están separados; Inter se sirve desde Google Fonts y el sitio no requiere un proceso de compilación.
 
 ## Ejecutar localmente
 
@@ -54,4 +55,4 @@ Después visita `http://localhost:8000`.
 
 ## Personalización pendiente
 
-Coloca tu hoja de vida en `assets/docs/hoja-de-vida-angel-briceno.pdf` para habilitar la descarga del botón del Hero. Añade enlaces reales de GitHub y demo al proyecto cuando estén disponibles; por ahora el sitio no inventa destinos para esos recursos.
+Coloca tu hoja de vida en `assets/docs/hoja-de-vida-angel-briceno.pdf` para habilitar la descarga del botón del Hero. El enlace de GitHub de la tarjeta dirige al perfil y sus repositorios; reemplázalo por la URL del repositorio Interclases cuando tengas el destino específico.

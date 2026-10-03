@@ -21,8 +21,8 @@
   height: 7px;
   margin-right: 7px;
   border-radius: 50%;
-  background: #66d5a2;
-  box-shadow: 0 0 12px rgb(102 213 162 / 64%);
+  background: var(--color-accent-bright);
+  box-shadow: 0 0 12px rgb(139 92 246 / 48%);
   vertical-align: 1px;
 }
 
@@ -78,13 +78,14 @@
 }
 
 .button--primary {
-  background: linear-gradient(110deg, #7160dd, #8d76ef);
-  box-shadow: 0 8px 24px rgb(120 98 225 / 23%);
+  background: var(--color-accent);
+  box-shadow: var(--shadow-accent);
   color: #fff;
 }
 
 .button--primary:hover {
-  box-shadow: 0 11px 30px rgb(120 98 225 / 34%);
+  background: var(--color-accent-bright);
+  box-shadow: 0 11px 30px rgb(139 92 246 / 26%);
 }
 
 .button--secondary {
@@ -119,7 +120,7 @@
 
 .orbit {
   position: absolute;
-  border: 1px solid rgb(157 140 255 / 17%);
+  border: 1px solid var(--color-border);
   border-radius: 50%;
   transform: rotate(-25deg);
 }
@@ -146,10 +147,8 @@
   overflow: hidden;
   border: 1px solid var(--color-border-strong);
   border-radius: 20px;
-  background:
-    linear-gradient(135deg, rgb(112 95 203 / 12%), transparent 55%),
-    var(--color-bg-elevated);
-  box-shadow: var(--shadow-card), 0 0 70px rgb(111 93 210 / 10%);
+  background: var(--color-bg-elevated);
+  box-shadow: var(--shadow-card);
   transform: rotate(-3deg);
 }
 
@@ -195,7 +194,7 @@
 }
 
 .hero-card__code b {
-  color: #9e8aff;
+  color: var(--color-accent-bright);
   font-weight: 500;
 }
 
@@ -266,7 +265,7 @@
 }
 
 .projects-section {
-  background: linear-gradient(180deg, transparent, rgb(114 96 202 / 5%), transparent);
+  background: var(--color-bg-elevated);
 }
 
 .project-tools {
@@ -302,8 +301,8 @@
 }
 
 .filter-button.is-active {
-  border-color: rgb(157 140 255 / 38%);
-  background: rgb(157 140 255 / 12%);
+  border-color: var(--color-accent);
+  background: rgb(139 92 246 / 12%);
   color: var(--color-accent-bright);
 }
 
@@ -360,8 +359,8 @@
 
 .project-card:hover {
   transform: translateY(-6px);
-  border-color: rgb(157 140 255 / 43%);
-  box-shadow: var(--shadow-card), 0 0 34px rgb(115 96 210 / 9%);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-card), 0 0 28px rgb(139 92 246 / 9%);
 }
 
 .project-card[hidden] {
@@ -378,113 +377,59 @@
 
 .project-card__visual--interclases {
   background:
-    radial-gradient(ellipse at 50% 49%, rgb(72 118 233 / 32%), transparent 48%),
-    linear-gradient(135deg, #111b32, #17233b 55%, #11182b);
+    radial-gradient(ellipse at 50% 50%, rgb(139 92 246 / 9%), transparent 56%),
+    #111217;
 }
 
-.project-card__visual--interclases::before,
-.project-card__visual--interclases::after {
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  border: 1px solid rgb(151 170 229 / 12%);
-  border-radius: 50%;
-  content: "";
-}
-
-.project-card__visual--interclases::after {
-  width: 330px;
-  height: 330px;
-}
-
-.match-preview {
+.project-identity {
   position: relative;
   z-index: 1;
-  width: min(360px, calc(100% - 42px));
-  padding: 15px 17px;
-  border: 1px solid rgb(202 214 255 / 20%);
-  border-radius: 13px;
-  background: rgb(11 16 32 / 82%);
-  box-shadow: 0 14px 38px rgb(0 0 0 / 28%);
-}
-
-.match-preview__top,
-.match-preview__bottom {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  color: #9baac6;
-  font-size: 0.57rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
 }
 
-.match-preview__top span:first-child {
-  color: #d2dafa;
-}
-
-.match-preview__teams {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 13px 10px;
-}
-
-.team-badge {
+.project-identity__icon {
   display: grid;
-  width: 42px;
-  height: 42px;
+  width: 53px;
+  height: 53px;
+  margin-bottom: 5px;
   place-items: center;
-  border-radius: 12px;
-  color: #fff;
-  font-family: var(--font-heading);
-  font-size: 0.9rem;
-  font-weight: 700;
+  border: 1px solid rgb(167 139 250 / 28%);
+  border-radius: 16px;
+  background: rgb(139 92 246 / 10%);
+  color: var(--color-accent-bright);
 }
 
-.team-badge--blue {
-  background: linear-gradient(140deg, #527ff0, #3158c1);
+.project-identity__icon svg {
+  width: 27px;
+  height: 27px;
 }
 
-.team-badge--pink {
-  background: linear-gradient(140deg, #e981b0, #b84e83);
-}
-
-.match-preview__score {
-  color: #fff;
-  font-family: var(--font-heading);
-  font-size: 1.75rem;
-  font-weight: 700;
-}
-
-.match-preview__score small {
-  color: #75819b;
-  font-size: 1rem;
-}
-
-.match-preview__bottom {
-  justify-content: center;
-  gap: 6px;
-  padding-top: 9px;
-  border-top: 1px solid rgb(202 214 255 / 12%);
-  color: #a5b1c9;
-  letter-spacing: 0;
-}
-
-.match-preview__bottom .live-dot {
-  width: 5px;
-  height: 5px;
-  margin: 0;
-}
-
-.project-card__number {
-  position: absolute;
-  right: 17px;
-  bottom: 14px;
-  color: rgb(220 229 255 / 56%);
-  font-family: var(--font-heading);
+.project-identity__label {
+  color: var(--color-accent-bright);
   font-size: 0.65rem;
-  letter-spacing: 0.09em;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.project-identity__label span {
+  padding-inline: 4px;
+  color: var(--color-muted);
+}
+
+.project-identity__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  font-weight: 700;
+  letter-spacing: -0.06em;
+}
+
+.project-identity__caption {
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
 }
 
 .project-card__body {
@@ -586,10 +531,23 @@
   font-weight: 700;
 }
 
-.project-card__link--muted {
-  color: var(--color-muted);
-  font-size: 0.74rem;
-  font-weight: 500;
+.project-card__link--github {
+  min-height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--color-accent);
+  border-radius: 9px;
+  color: var(--color-accent-bright);
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.project-card__link--github:hover {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.project-card__link--github svg {
+  width: 17px;
+  height: 17px;
 }
 
 .empty-state {
@@ -603,7 +561,7 @@
 }
 
 .approach-section {
-  background: linear-gradient(180deg, transparent, rgb(83 133 210 / 4%), transparent);
+  background: var(--color-bg);
 }
 
 .values-grid {
@@ -634,9 +592,9 @@
   height: 40px;
   margin-bottom: 23px;
   place-items: center;
-  border: 1px solid rgb(157 140 255 / 27%);
+  border: 1px solid rgb(167 139 250 / 28%);
   border-radius: 12px;
-  background: rgb(157 140 255 / 10%);
+  background: rgb(139 92 246 / 9%);
   color: var(--color-accent-bright);
   font-family: "Cascadia Code", "Consolas", monospace;
   font-size: 0.94rem;
@@ -644,23 +602,23 @@
 }
 
 .value-card__icon--user {
-  border-color: rgb(105 168 255 / 27%);
-  background: rgb(105 168 255 / 10%);
-  color: var(--color-accent-blue);
+  border-color: rgb(167 139 250 / 28%);
+  background: rgb(139 92 246 / 9%);
+  color: var(--color-accent-bright);
 }
 
 .value-card__icon--test {
-  border-color: rgb(102 213 162 / 27%);
-  background: rgb(102 213 162 / 10%);
-  color: #66d5a2;
+  border-color: rgb(167 139 250 / 28%);
+  background: rgb(139 92 246 / 9%);
+  color: var(--color-accent-bright);
   font-family: var(--font-heading);
   font-size: 1.2rem;
 }
 
 .value-card__icon--solve {
-  border-color: rgb(240 181 119 / 27%);
-  background: rgb(240 181 119 / 10%);
-  color: #f0b577;
+  border-color: rgb(167 139 250 / 28%);
+  background: rgb(139 92 246 / 9%);
+  color: var(--color-accent-bright);
   font-family: var(--font-heading);
   font-size: 1.2rem;
 }
@@ -696,11 +654,9 @@
   justify-content: space-between;
   gap: 30px;
   padding: clamp(28px, 5vw, 55px);
-  border: 1px solid rgb(157 140 255 / 24%);
+  border: 1px solid var(--color-border);
   border-radius: 22px;
-  background:
-    radial-gradient(ellipse at 80% 50%, rgb(133 113 226 / 15%), transparent 48%),
-    var(--color-bg-elevated);
+  background: var(--color-bg-elevated);
 }
 
 .contact-card .eyebrow {
