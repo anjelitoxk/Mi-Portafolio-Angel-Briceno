@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Portafolio de Ángel Orlando Briceño Chacón, desarrollador frontend en Medellín, Colombia."
+    >
+    <meta name="theme-color" content="#0b1020">
+    <title>Ángel Briceño | Desarrollador Frontend</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/projects.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header__inner">
+        <a class="brand" href="#inicio" aria-label="Ángel Briceño, inicio">
+          <span class="brand__mark" aria-hidden="true">AB</span>
+          <span class="brand__name">Ángel Briceño</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Abrir menú de navegación"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="primary-navigation" aria-label="Navegación principal">
+          <a class="site-nav__link" href="#proyectos">Proyectos</a>
+          <a class="site-nav__link" href="#enfoque">Mi enfoque</a>
+          <a class="site-nav__link" href="#contacto">Contacto</a>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Cambiar a tema claro"
+            aria-pressed="false"
+          >
+            <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path>
+            </svg>
+            <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.2 15.2A8.5 8.5 0 0 1 8.8 3.8 8.5 8.5 0 1 0 20.2 15.2Z"></path>
+            </svg>
+            <span class="sr-only">Cambiar tema</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero section container" id="inicio" aria-labelledby="hero-title">
+        <div class="hero__content" data-reveal>
+          <p class="eyebrow"><span class="status-dot"></span> Desarrollo web con propósito</p>
+          <h1 id="hero-title">Hola, soy <span class="text-gradient">Ángel Briceño.</span></h1>
+          <p class="hero__role">Desarrollador Frontend <span aria-hidden="true">·</span> Medellín, Colombia</p>
+          <p class="hero__intro">
+            Me apasiona automatizar procesos y simplificar tareas con experiencias digitales
+            claras, útiles y pensadas para las personas.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#proyectos">
+              Ver proyectos <span aria-hidden="true">↗</span>
+            </a>
+            <a class="button button--secondary" href="assets/docs/hoja-de-vida-angel-briceno.pdf" download>
+              Descargar CV <span aria-hidden="true">↓</span>
+            </a>
+            <a class="button button--text" href="#contacto">Contacto <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="hero__note">Frontend con curiosidad por construir soluciones de principio a fin.</p>
+        </div>
+        <div class="hero__visual" data-reveal aria-hidden="true">
+          <div class="orbit orbit--outer"></div>
+          <div class="orbit orbit--inner"></div>
+          <div class="hero-card">
+            <span class="hero-card__dots"><i></i><i></i><i></i></span>
+            <span class="hero-card__code hero-card__code--muted">// ideas que se convierten en</span>
+            <span class="hero-card__code"><b>experiencias</b> = {</span>
+            <span class="hero-card__code hero-card__code--indent">útiles: <em>true</em>,</span>
+            <span class="hero-card__code hero-card__code--indent">claras: <em>true</em>,</span>
+            <span class="hero-card__code hero-card__code--indent">hechasCon: <strong>paciencia</strong></span>
+            <span class="hero-card__code">};</span>
+            <span class="hero-card__cursor"></span>
+          </div>
+          <span class="hero__spark hero__spark--one">✳</span>
+          <span class="hero__spark hero__spark--two">✦</span>
+        </div>
+        <a class="scroll-cue" href="#proyectos" aria-label="Desplazarse a proyectos">
+          <span></span> Desliza para explorar
+        </a>
+      </section>
+
+      <section class="section projects-section" id="proyectos" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <div>
+              <p class="eyebrow">Trabajo seleccionado</p>
+              <h2 id="projects-title">Proyectos <span class="text-gradient">con propósito.</span></h2>
+            </div>
+            <p class="section-heading__copy">
+              Ideas que responden a necesidades reales, con foco en una experiencia sencilla.
+            </p>
+          </div>
+
+          <div class="project-tools" data-reveal>
+            <div class="project-filters" role="group" aria-label="Filtrar proyectos">
+              <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Todos</button>
+              <button class="filter-button" type="button" data-filter="destacados" aria-pressed="false">Destacados</button>
+              <button class="filter-button" type="button" data-filter="media-tecnica" aria-pressed="false">Media Técnica</button>
+              <button class="filter-button" type="button" data-filter="automatizacion" aria-pressed="false">Automatización</button>
+            </div>
+            <label class="project-search">
+              <span class="sr-only">Buscar proyectos</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 4 4"></path></svg>
+              <input id="project-search" type="search" placeholder="Buscar proyectos..." autocomplete="off">
+            </label>
+          </div>
+
+          <p class="sr-only" id="project-results" aria-live="polite"></p>
+          <div class="projects-grid" id="projects-grid">
+            <article
+              class="project-card"
+              data-project
+              data-categories="destacados media-tecnica automatizacion"
+              data-search="plataforma interclases ljv calendario partidos resultados estudiantes html css javascript node.js automatización media técnica"
+              data-reveal
+            >
+              <div class="project-card__visual project-card__visual--interclases" aria-hidden="true">
+                <div class="match-preview">
+                  <div class="match-preview__top"><span>LJV · INTERCLASES</span><span>CALENDARIO</span></div>
+                  <div class="match-preview__teams">
+                    <span class="team-badge team-badge--blue">A</span>
+                    <span class="match-preview__score"><small>VS</small></span>
+                    <span class="team-badge team-badge--pink">B</span>
+                  </div>
+                  <div class="match-preview__bottom"><span>Partidos</span><span class="live-dot"></span><span>Resultados</span></div>
+                </div>
+                <span class="project-card__number">01 / 01</span>
+              </div>
+              <div class="project-card__body">
+                <div class="project-card__title-row">
+                  <div>
+                    <p class="eyebrow">Proyecto destacado</p>
+                    <h3>Plataforma Interclases LJV</h3>
+                  </div>
+                  <span class="project-card__arrow" aria-hidden="true">↗</span>
+                </div>
+                <div class="project-story">
+                  <p><strong>El problema</strong> <span>La información de partidos y resultados necesita un canal centralizado para que la comunidad estudiantil pueda consultarla fácilmente.</span></p>
+                  <p><strong>La solución</strong> <span>Una plataforma web para organizar el calendario y facilitar la publicación y consulta de la actividad deportiva.</span></p>
+                  <p><strong>Mi rol</strong> <span>Desarrollo independiente de la experiencia y la plataforma.</span></p>
+                </div>
+                <ul class="tag-list" aria-label="Tecnologías y categorías">
+                  <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Node.js</li>
+                </ul>
+                <div class="project-card__links">
+                  <span class="project-card__link project-card__link--muted">Código y demo disponibles próximamente</span>
+                </div>
+              </div>
+            </article>
+            <p class="empty-state" id="empty-state" hidden>No encontramos proyectos con esos criterios. Prueba otra búsqueda o categoría.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section approach-section" id="enfoque" aria-labelledby="approach-title">
+        <div class="container">
+          <div class="section-heading section-heading--center" data-reveal>
+            <p class="eyebrow">Cómo trabajo</p>
+            <h2 id="approach-title">Mi enfoque de <span class="text-gradient">desarrollo.</span></h2>
+            <p class="section-heading__copy">
+              Buen software se construye con atención al detalle y respeto por quien lo usa.
+            </p>
+          </div>
+          <div class="values-grid">
+            <article class="value-card" data-reveal>
+              <span class="value-card__icon" aria-hidden="true">{ }</span>
+              <h3>Código claro</h3>
+              <p>Organizo cada pieza para que sea fácil de entender, mantener y mejorar.</p>
+              <span class="value-card__index">01</span>
+            </article>
+            <article class="value-card" data-reveal>
+              <span class="value-card__icon value-card__icon--user" aria-hidden="true">◎</span>
+              <h3>Diseño con empatía</h3>
+              <p>Pienso primero en las personas y en hacer que cada interacción tenga sentido.</p>
+              <span class="value-card__index">02</span>
+            </article>
+            <article class="value-card" data-reveal>
+              <span class="value-card__icon value-card__icon--test" aria-hidden="true">✓</span>
+              <h3>Pruebas con paciencia</h3>
+              <p>Verifico los detalles y aprendo de cada iteración antes de dar algo por terminado.</p>
+              <span class="value-card__index">03</span>
+            </article>
+            <article class="value-card" data-reveal>
+              <span class="value-card__icon value-card__icon--solve" aria-hidden="true">↗</span>
+              <h3>Perseverancia</h3>
+              <p>Investigo los errores, pruebo alternativas y sigo hasta encontrar una solución.</p>
+              <span class="value-card__index">04</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section section" id="contacto" aria-labelledby="contact-title">
+        <div class="container contact-card" data-reveal>
+          <div>
+            <p class="eyebrow">¿Tienes una idea?</p>
+            <h2 id="contact-title">Construyamos algo <span class="text-gradient">útil.</span></h2>
+            <p>Estoy abierto a conversar sobre proyectos, colaboración y nuevos retos.</p>
+          </div>
+          <a class="button button--primary" href="https://github.com/anjelitoxk" target="_blank" rel="noopener noreferrer">
+            Conectemos en GitHub <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <a class="brand brand--footer" href="#inicio">
+          <span class="brand__mark" aria-hidden="true">AB</span>
+          <span class="brand__name">Ángel Briceño</span>
+        </a>
+        <p>Diseñado y construido con intención · <span id="current-year">2026</span></p>
+        <a class="footer__top" href="#inicio">Volver arriba ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
