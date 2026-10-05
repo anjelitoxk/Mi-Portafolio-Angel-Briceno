@@ -1,33 +1,32 @@
 # Mi Portafolio — Ángel Briceño
 
-Portafolio personal de Ángel Orlando Briceño Chacón, desarrollador frontend en Medellín, Colombia. El sitio presenta proyectos, tecnologías y principios de trabajo en una experiencia responsive con tema claro y oscuro.
+Portafolio personal de Ángel Orlando Briceño Chacón, desarrollador frontend en Medellín, Colombia. Presenta su enfoque en automatización y simplificación de procesos, su participación en el Semillero Quipux Aulas de Ciudad, su formación técnica y proyectos.
 
 ## Estructura
 
 ```text
 .
-├── assets/
-│   ├── docs/       # Hoja de vida descargable
-│   ├── icons/      # Iconos locales (si se agregan)
-│   └── images/     # Imágenes de proyectos (si se agregan)
 ├── css/
-│   ├── main.css    # Variables, estilos globales y navegación
-│   ├── components.css
-│   └── responsive.css
+│   ├── main.css       # Variables, estilos globales y utilidades
+│   ├── components.css # Componentes y secciones
+│   └── responsive.css # Adaptaciones para pantallas pequeñas
+├── assets/
+│   └── images/        # Retrato y logos de LJV, UPB y Quipux
 ├── js/
-│   ├── main.js     # Tema, menú móvil y animaciones de entrada
-│   └── projects.js # Búsqueda y filtros de proyectos
+│   └── main.js        # Menú, terminal, cursor Lerp y animaciones de entrada
 └── index.html
 ```
 
 ## Decisiones de diseño y rendimiento
 
-- Diseño mobile-first, con HTML semántico, navegación por teclado y estados accesibles para controles.
-- Tema oscuro con fondo `#0d0e12`, superficies `#16181f` y acento morado reservado para estados activos, iconos y llamadas a la acción; el tema claro sigue disponible.
-- El tema inicial respeta la preferencia del sistema; la selección manual se guarda en `localStorage`.
-- La búsqueda y los filtros funcionan en el navegador, sin dependencias ni solicitudes adicionales.
-- Las animaciones de entrada usan `IntersectionObserver` y respetan `prefers-reduced-motion`.
-- La tarjeta de Interclases usa un icono SVG y tipografía, no imágenes ilustrativas. CSS, JavaScript y recursos están separados; Inter se sirve desde Google Fonts y el sitio no requiere un proceso de compilación.
+- Diseño responsive, con HTML semántico, navegación por teclado y menú móvil accesible.
+- Tema oscuro con fondo `#0d0e12`, superficies glassmorphism y acentos morados `#8b5cf6` / `#a78bfa`.
+- La ventana de código integra el retrato con máscara degradada, una terminal typewriter y un widget de concentración.
+- La navegación presenta la formación técnica, el proyecto Interclases LJV y la proyección profesional hacia Quipux.
+- Los logos de LJV, UPB y Quipux se sirven localmente; los fondos claros de origen se preparan con transparencia cuando aplica.
+- El cursor Lerp se activa solo con puntero fino y respeta `prefers-reduced-motion`; las animaciones de entrada usan `IntersectionObserver`.
+- La cinta infinita utiliza iconos Devicon y pausa al pasar el cursor; las tecnologías siguen legibles si el CDN no está disponible.
+- CSS y JavaScript están separados; Inter y DM Mono se sirven desde Google Fonts, Devicon desde jsDelivr. El sitio no requiere un proceso de compilación.
 
 ## Ejecutar localmente
 
@@ -53,6 +52,6 @@ Después visita `http://localhost:8000`.
 3. Selecciona el repositorio y deja vacíos el comando de build y el directorio de publicación (raíz del repositorio).
 4. Pulsa **Deploy site**. Netlify publicará los cambios nuevos al actualizar la rama.
 
-## Personalización pendiente
+## Enlaces del proyecto
 
-Coloca tu hoja de vida en `assets/docs/hoja-de-vida-angel-briceno.pdf` para habilitar la descarga del botón del Hero. El enlace de GitHub de la tarjeta dirige al perfil y sus repositorios; reemplázalo por la URL del repositorio Interclases cuando tengas el destino específico.
+El enlace de Interclases dirige al perfil público de GitHub porque todavía no se ha configurado una URL específica para el repositorio o una demo pública. Actualiza ese destino en `index.html` cuando estén disponibles.
