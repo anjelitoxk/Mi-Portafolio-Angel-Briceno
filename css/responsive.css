@@ -355,7 +355,7 @@
   .studio-profile__caption {
     bottom: 9px;
     left: 8px;
-    font-size: 0.38rem;
+    font-size: 0.54rem;
   }
 
   .studio-editor {
@@ -364,19 +364,19 @@
 
   .studio-editor__location {
     gap: 5px;
-    font-size: 0.43rem;
+    font-size: 0.56rem;
   }
 
   .terminal__screen {
     min-height: 155px;
     padding: 10px 6px;
-    font-size: 0.51rem;
+    font-size: 0.62rem;
     line-height: 1.9;
   }
 
   .terminal__prompt {
     padding-inline: 7px;
-    font-size: 0.4rem;
+    font-size: 0.54rem;
   }
 
   .music-player {
@@ -392,11 +392,11 @@
 
   .music-player__eyebrow,
   .music-player__subtitle {
-    font-size: 0.38rem;
+    font-size: 0.52rem;
   }
 
   .music-player__title {
-    font-size: 0.48rem;
+    font-size: 0.62rem;
   }
 
   .audio-equalizer {
@@ -404,13 +404,13 @@
   }
 
   .studio-editor__status {
-    font-size: 0.46rem;
+    font-size: 0.56rem;
   }
 
   .studio-window__statusbar {
     gap: 9px;
     padding-inline: 8px;
-    font-size: 0.4rem;
+    font-size: 0.52rem;
   }
 
   .about-grid {
@@ -452,7 +452,7 @@
 
   .media-card__institution div span,
   .media-card__institution div small {
-    font-size: 0.49rem;
+    font-size: 0.58rem;
   }
 
   .media-card__details {
@@ -509,22 +509,6 @@
     width: 100%;
   }
 
-  .site-footer__credit,
-  .site-footer__top {
-    font-size: 0.57rem;
-  }
-}
-
-@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
-  .custom-cursor {
-    display: none !important;
-  }
-
-  body.has-custom-cursor,
-  body.has-custom-cursor a,
-  body.has-custom-cursor button {
-    cursor: auto;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -25,7 +25,7 @@
     <script src="js/main.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
     <header class="site-header">
       <div class="page-container site-header__inner">
@@ -43,7 +43,7 @@
           <span class="nav-toggle__line"></span>
           <span class="nav-toggle__line"></span>
         </button>
-        <nav class="site-nav" id="primary-navigation" aria-label="Navegación principal">
+        <nav class="site-nav" id="primary-navigation" role="navigation" aria-label="Navegación principal">
           <a class="site-nav__link" href="#sobre-mi">Sobre mí</a>
           <a class="site-nav__link" href="#media-tecnica">Media Técnica</a>
           <a class="site-nav__link" href="#vision-quipux">Visión Quipux</a>
@@ -54,7 +54,7 @@
       </div>
     </header>
 
-    <main id="contenido">
+    <main id="main-content" role="main">
       <section class="hero" id="inicio" aria-labelledby="hero-title">
         <div class="hero__stars" aria-hidden="true"></div>
         <div class="page-container hero__layout">
@@ -69,10 +69,10 @@
               <span aria-hidden="true">|</span>
               <span class="hero__role-future">Futuro Arquitecto de Software</span>
             </p>
-            <p class="hero__aspiration">Con la meta clara de formar parte del equipo de Quipux.</p>
+            <p class="hero__aspiration">Aspirante a formar parte del equipo de Quipux.</p>
             <p class="hero__purpose">
-              <span>Visión</span>
-              Crear soluciones digitales que dejen huella y mejoren el mundo mediante la automatización y la simplificación de procesos.
+              <span>Propósito</span>
+              Crear soluciones digitales claras que simplifiquen tareas y mejoren procesos mediante la tecnología.
             </p>
             <div class="hero__actions">
               <a class="button button--primary" href="#proyectos">Explorar proyectos <span aria-hidden="true">↘</span></a>
@@ -81,7 +81,7 @@
             <div class="hero__index" aria-hidden="true"><span>PORTAFOLIO / 2026</span><span>01 — 06</span></div>
           </div>
 
-          <article class="studio-window" aria-label="Ventana de código y música" data-reveal>
+          <article class="studio-window" aria-label="Editor de código y reproductor de música" data-reveal>
             <div class="studio-window__chrome" aria-hidden="true">
               <span class="window-dot window-dot--red"></span>
               <span class="window-dot window-dot--yellow"></span>
@@ -104,21 +104,21 @@
                   height="1024"
                   fetchpriority="high"
                 >
-                <span class="studio-profile__caption">AOB / SOFTWARE DEVELOPER</span>
+                <span class="studio-profile__caption">AOB / DESARROLLO DE SOFTWARE</span>
               </div>
               <div class="studio-editor">
                 <div class="studio-editor__location" aria-hidden="true"><span>Angel.js</span><span>›</span><span>dev</span></div>
                 <div class="terminal">
                   <div class="terminal__prompt" aria-hidden="true"><span>~/angel</span><span>node · listo</span></div>
-                  <pre class="terminal__screen"><code><span class="terminal__line-number" aria-hidden="true">01</span> <span class="terminal__typed" data-typewriter aria-hidden="true">const dev = { nombre: "Ángel Briceño", rol: "Frontend Dev", meta: "Arquitectura de Software" };</span><span class="terminal__cursor" aria-hidden="true"></span></code></pre>
-                  <p class="sr-only">const dev = { nombre: "Ángel Briceño", rol: "Frontend Dev", meta: "Arquitectura de Software" };</p>
+                  <pre class="terminal__screen"><code><span class="terminal__line-number" aria-hidden="true">01</span> <span class="terminal__typed" data-typewriter aria-hidden="true">const perfil = { nombre: "Ángel Briceño", titulo: "Bachiller Técnico en Desarrollo de Software", meta: "Arquitectura de Software" };</span><span class="terminal__cursor" aria-hidden="true"></span></code></pre>
+                  <p class="sr-only">const perfil = { nombre: "Ángel Briceño", titulo: "Bachiller Técnico en Desarrollo de Software", meta: "Arquitectura de Software" };</p>
                 </div>
-                <div class="music-player" aria-label="Modo de concentración: Deep Focus and Coding">
+                <div class="music-player" role="group" aria-label="Reproductor decorativo en modo de enfoque y programación">
                   <div class="music-player__disc" aria-hidden="true"><span>♪</span></div>
                   <div class="music-player__copy">
-                    <span class="music-player__eyebrow">NOW PLAYING</span>
-                    <span class="music-player__title">Mode: Deep Focus &amp; Coding <span aria-hidden="true">🎧</span></span>
-                    <span class="music-player__subtitle">focus_session.wav · repeat</span>
+                    <span class="music-player__eyebrow">REPRODUCIENDO</span>
+                    <span class="music-player__title">Modo: Enfoque y Programación <span aria-hidden="true">🎧</span></span>
+                    <span class="music-player__subtitle">Sesión de concentración · repetición</span>
                   </div>
                   <div class="audio-equalizer" aria-hidden="true">
                     <span></span><span></span><span></span><span></span><span></span>
@@ -137,7 +137,7 @@
         <div class="page-container">
           <div class="section-heading section-heading--split" data-reveal>
             <div>
-              <p class="section-kicker">Sobre mí / 01</p>
+              <p class="section-kicker">SOBRE MÍ</p>
               <h2 class="section-heading__title" id="about-title">La tecnología debe <span>hacerlo más simple.</span></h2>
             </div>
             <p class="section-heading__description">
@@ -146,19 +146,18 @@
           </div>
           <div class="about-grid">
             <article class="bento-card about-card about-card--statement" data-reveal>
-              <span class="bento-card__index">01 / ENFOQUE</span>
-              <div class="about-card__symbol" aria-hidden="true">↗</div>
+              <span class="bento-card__index">ENFOQUE</span>
               <h3>Automatizar lo repetitivo. Mejorar lo cotidiano.</h3>
               <p>Desarrollo con curiosidad, disciplina y una visión práctica: que cada herramienta resuelva algo real y le ahorre pasos a alguien.</p>
             </article>
             <article class="bento-card about-card about-card--principle" data-reveal>
-              <span class="bento-card__index">02 / PRINCIPIO</span>
+              <span class="bento-card__index">PRINCIPIO</span>
               <span class="about-card__quote-mark" aria-hidden="true">“</span>
               <blockquote>La mejor solución no es la más compleja: es la que hace que todo fluya.</blockquote>
               <span class="about-card__attribution">MI FORMA DE PENSAR EL SOFTWARE</span>
             </article>
             <article class="bento-card about-card about-card--coordinates" data-reveal>
-              <span class="bento-card__index">03 / BASE</span>
+              <span class="bento-card__index">BASE</span>
               <div class="about-card__coordinates">
                 <span>6.2442° N</span>
                 <span>75.5812° W</span>
@@ -175,13 +174,13 @@
         <div class="page-container">
           <div class="section-heading section-heading--split" data-reveal>
             <div>
-              <p class="section-kicker">Formación / 02</p>
+              <p class="section-kicker">Formación</p>
               <h2 class="section-heading__title" id="media-title">Aprender haciendo.<br><span>Construir con propósito.</span></h2>
             </div>
             <p class="section-heading__description">Media Técnica en Desarrollo de Software junto a la I.E. Lucrecio Jaramillo Vélez y la UPB.</p>
           </div>
           <article class="bento-card media-card" id="proyectos" data-reveal>
-            <div class="media-card__institutions" aria-label="Instituciones educativas">
+            <div class="media-card__institutions" role="group" aria-label="Instituciones educativas">
               <div class="media-card__institution media-card__institution--school">
                 <img src="assets/images/logo-ljv.png" alt="Escudo de la Institución Educativa Lucrecio Jaramillo Vélez" width="120" height="120" loading="lazy">
                 <div><span>INSTITUCIÓN EDUCATIVA</span><strong>Lucrecio Jaramillo Vélez</strong><small>Sede principal · Medellín, Antioquia</small></div>
@@ -196,7 +195,7 @@
               <div class="media-card__project-intro">
                 <p class="section-kicker">Proyecto destacado / 2026</p>
                 <h3>Plataforma de Gestión Interclases LJV</h3>
-                <p class="media-card__address"><span aria-hidden="true">⌖</span> Carrera 79 # 38-59 · Barrio Laureles · Medellín, Antioquia</p>
+                <address class="media-card__address"><span aria-hidden="true">⌖</span> Dirección: carrera 79 # 38-59 · barrio Laureles · Medellín, Antioquia</address>
               </div>
               <div class="media-card__problem-solution">
                 <div>
@@ -230,13 +229,13 @@
           <article class="vision-card" data-reveal>
             <div class="vision-card__orb" aria-hidden="true"></div>
             <div class="vision-card__visual">
-              <span class="section-kicker">Una meta con dirección / 03</span>
+              <span class="section-kicker">Una meta con dirección</span>
               <a
                 class="vision-card__brand"
                 href="https://www.quipux.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Visitar el sitio oficial de Quipux"
+                aria-label="Visitar el sitio web oficial de Quipux (se abre en nueva pestaña)"
               >
                 <img src="assets/images/logo-quipux.png" alt="Quipux" width="214" height="45" loading="lazy">
                 <span class="vision-card__external" aria-hidden="true">↗</span>
@@ -247,9 +246,9 @@
               <p class="section-kicker">Visión y proyección en Quipux</p>
               <h2 class="section-heading__title" id="vision-title">El siguiente paso<br>es <span>seguir creciendo.</span></h2>
               <p class="vision-card__statement">
-                Participante activo del Semillero Aulas de Ciudad 2026. Tengo expectativas muy altas sobre mis capacidades y lo que puedo aportar al equipo. Mi profesor preferido es Sebas, y mi meta es aprender al máximo para llegar a ser un Arquitecto de Software de su nivel. Tengo un firme interés en trabajar en Quipux por su filosofía “People First” y me entusiasma la idea de conocer sus instalaciones.
+                Participante activo del Semillero Aulas de Ciudad 2026. Tengo expectativas muy altas sobre mis capacidades y lo que puedo aportar al equipo. Mi profesor preferido es Sebas, y mi meta es aprender al máximo para llegar a ser un Arquitecto de Software de su nivel. Tengo un firme interés en trabajar en Quipux por su filosofía «People First» y me entusiasma la idea de conocer sus instalaciones.
               </p>
-              <a class="button button--glass" href="https://www.quipux.com/" target="_blank" rel="noopener noreferrer">
+              <a class="button button--glass" href="https://www.quipux.com/" target="_blank" rel="noopener noreferrer" aria-label="Visitar el sitio web oficial de Quipux (se abre en nueva pestaña)">
                 Conocer Quipux <span aria-hidden="true">↗</span>
               </a>
             </div>
@@ -261,10 +260,16 @@
       <section class="tech-marquee" id="tecnologias" aria-labelledby="technology-title">
         <div class="page-container tech-marquee__heading">
           <p class="section-kicker" id="technology-title">Un conjunto de herramientas en crecimiento</p>
-          <span class="tech-marquee__note">TECNOLOGÍAS / 09</span>
+          <span class="tech-marquee__note">TECNOLOGÍAS</span>
+          <button
+            class="tech-marquee__toggle"
+            type="button"
+            aria-controls="technology-track"
+            aria-label="Pausar animación de tecnologías"
+          >Pausar animación</button>
         </div>
         <div class="tech-marquee__viewport">
-          <ul class="tech-marquee__track" aria-label="Tecnologías">
+          <ul class="tech-marquee__track" id="technology-track" aria-label="Tecnologías">
             <li class="tech-marquee__item"><i class="devicon-html5-plain" aria-hidden="true"></i><span>HTML5</span></li>
             <li class="tech-marquee__item"><i class="devicon-css3-plain" aria-hidden="true"></i><span>CSS3</span></li>
             <li class="tech-marquee__item"><i class="devicon-javascript-plain" aria-hidden="true"></i><span>JavaScript ES6+</span></li>
@@ -272,7 +277,6 @@
             <li class="tech-marquee__item"><i class="devicon-express-original" aria-hidden="true"></i><span>Express.js</span></li>
             <li class="tech-marquee__item"><i class="devicon-git-plain" aria-hidden="true"></i><span>Git</span></li>
             <li class="tech-marquee__item"><i class="devicon-github-original" aria-hidden="true"></i><span>GitHub</span></li>
-            <li class="tech-marquee__item"><i class="devicon-azuresqldatabase-plain" aria-hidden="true"></i><span>SQL</span></li>
             <li class="tech-marquee__item"><i class="devicon-vscode-plain" aria-hidden="true"></i><span>VS Code</span></li>
           </ul>
           <ul class="tech-marquee__track tech-marquee__track--clone" aria-hidden="true">
@@ -283,7 +287,6 @@
             <li class="tech-marquee__item"><i class="devicon-express-original"></i><span>Express.js</span></li>
             <li class="tech-marquee__item"><i class="devicon-git-plain"></i><span>Git</span></li>
             <li class="tech-marquee__item"><i class="devicon-github-original"></i><span>GitHub</span></li>
-            <li class="tech-marquee__item"><i class="devicon-azuresqldatabase-plain"></i><span>SQL</span></li>
             <li class="tech-marquee__item"><i class="devicon-vscode-plain"></i><span>VS Code</span></li>
           </ul>
         </div>
@@ -293,33 +296,33 @@
         <div class="page-container">
           <div class="section-heading section-heading--split" data-reveal>
             <div>
-              <p class="section-kicker">Fuera del editor / 04</p>
+              <p class="section-kicker">Fuera del editor</p>
               <h2 class="section-heading__title" id="hobbies-title">También soy lo que <span>me inspira.</span></h2>
             </div>
             <p class="section-heading__description">Disciplina, imaginación y juego: otras formas de entrenar la curiosidad y seguir aprendiendo.</p>
           </div>
           <div class="hobbies-grid">
             <article class="bento-card hobby-card hobby-card--sport" data-reveal>
-              <span class="hobby-card__index">01 — ENERGÍA</span>
-              <span class="hobby-card__icon" aria-hidden="true">↗</span>
-              <h3 class="hobby-card__title">Gym / Deporte</h3>
+              <span class="hobby-card__index">ENERGÍA</span>
+              <span class="hobby-card__icon" aria-hidden="true">🏋️</span>
+              <h3 class="hobby-card__title">Gym y deporte</h3>
               <p class="hobby-card__description">Disciplina y constancia: mejorar un poco, cada día.</p>
             </article>
             <article class="bento-card hobby-card hobby-card--music" data-reveal>
-              <span class="hobby-card__index">02 — RITMO</span>
-              <span class="hobby-card__icon" aria-hidden="true">♫</span>
+              <span class="hobby-card__index">RITMO</span>
+              <span class="hobby-card__icon" aria-hidden="true">🎧</span>
               <h3 class="hobby-card__title">Música</h3>
               <p class="hobby-card__description">Creatividad y concentración para acompañar el proceso.</p>
             </article>
             <article class="bento-card hobby-card hobby-card--games" data-reveal>
-              <span class="hobby-card__index">03 — ESTRATEGIA</span>
-              <span class="hobby-card__icon" aria-hidden="true">⌘</span>
+              <span class="hobby-card__index">ESTRATEGIA</span>
+              <span class="hobby-card__icon" aria-hidden="true">🎮</span>
               <h3 class="hobby-card__title">Videojuegos</h3>
               <p class="hobby-card__description">Estrategia, exploración y resolución de problemas.</p>
             </article>
             <article class="bento-card hobby-card hobby-card--code" data-reveal>
-              <span class="hobby-card__index">04 — CREACIÓN</span>
-              <span class="hobby-card__icon" aria-hidden="true">&lt;/&gt;</span>
+              <span class="hobby-card__index">CREACIÓN</span>
+              <span class="hobby-card__icon" aria-hidden="true">💻</span>
               <h3 class="hobby-card__title">Desarrollo de software</h3>
               <p class="hobby-card__description">Automatización, lógica y curiosidad por cómo funcionan las cosas.</p>
             </article>
@@ -330,7 +333,7 @@
       <section class="contact-section content-section" id="contacto" aria-labelledby="contact-title">
         <div class="page-container contact-card" data-reveal>
           <div class="contact-card__copy">
-            <p class="section-kicker">El futuro se construye conversando / 05</p>
+            <p class="section-kicker">El futuro se construye conversando</p>
             <h2 class="section-heading__title" id="contact-title">¿Construimos algo <span>que importe?</span></h2>
             <p>Me entusiasma conectar con personas, aprender en equipo y aportar a proyectos con propósito.</p>
           </div>
@@ -351,9 +354,5 @@
       </div>
     </footer>
 
-    <div class="custom-cursor" aria-hidden="true">
-      <span class="custom-cursor__halo"></span>
-      <span class="custom-cursor__dot"></span>
-    </div>
   </body>
 </html>

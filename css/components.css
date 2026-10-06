@@ -332,7 +332,7 @@
   margin-inline: auto;
   color: #788091;
   font-family: var(--font-code);
-  font-size: 0.57rem;
+  font-size: 0.62rem;
 }
 
 .studio-window__window-mark {
@@ -357,7 +357,7 @@
   border-right: 1px solid rgb(255 255 255 / 6%);
   color: #747b8b;
   font-family: var(--font-code);
-  font-size: 0.58rem;
+  font-size: 0.62rem;
 }
 
 .studio-window__tab--active {
@@ -391,12 +391,11 @@
   justify-content: center;
   overflow: hidden;
   padding: 0 9px;
-  isolation: isolate;
 }
 
 .studio-profile__halo {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   right: -16%;
   bottom: 7%;
   left: -16%;
@@ -421,23 +420,33 @@
 }
 
 .studio-profile__photo {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   height: 342px;
   object-fit: cover;
   object-position: center 18%;
-  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  mix-blend-mode: screen;
+  mask-image:
+    linear-gradient(to bottom, transparent 0%, #000 18%, #000 60%, transparent 100%),
+    linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  mask-composite: intersect;
+  -webkit-mask-image:
+    linear-gradient(to bottom, transparent 0%, #000 18%, #000 60%, transparent 100%),
+    linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  -webkit-mask-composite: source-in;
   filter: drop-shadow(0 0 24px rgb(139 92 246 / 14%));
 }
 
 .studio-profile__caption {
   position: absolute;
+  z-index: 2;
   bottom: 11px;
   left: 17px;
   color: rgb(226 221 239 / 69%);
   font-family: var(--font-code);
-  font-size: 0.45rem;
+  font-size: 0.62rem;
   letter-spacing: 0.12em;
 }
 
@@ -455,7 +464,7 @@
   margin-bottom: 10px;
   color: #6e7687;
   font-family: var(--font-code);
-  font-size: 0.49rem;
+  font-size: 0.62rem;
 }
 
 .studio-editor__location span:first-child {
@@ -477,7 +486,7 @@
   border-bottom: 1px solid rgb(255 255 255 / 6%);
   color: #737b8b;
   font-family: var(--font-code);
-  font-size: 0.45rem;
+  font-size: 0.62rem;
 }
 
 .terminal__screen {
@@ -486,7 +495,7 @@
   padding: 14px 10px 15px;
   color: #d6caff;
   font-family: var(--font-code);
-  font-size: clamp(0.53rem, 0.73vw, 0.66rem);
+  font-size: clamp(0.62rem, 0.73vw, 0.72rem);
   line-height: 2.15;
   overflow-wrap: anywhere;
   white-space: pre-wrap;
@@ -494,7 +503,7 @@
 
 .terminal__line-number {
   padding-right: 6px;
-  color: #535b6b;
+  color: var(--color-muted);
   user-select: none;
 }
 
@@ -549,16 +558,16 @@
 
 .music-player__eyebrow,
 .music-player__subtitle {
-  color: #81899a;
+  color: var(--color-text-secondary);
   font-family: var(--font-code);
-  font-size: 0.43rem;
+  font-size: 0.58rem;
   letter-spacing: 0.08em;
 }
 
 .music-player__title {
   overflow: hidden;
   color: #e6e0f4;
-  font-size: 0.57rem;
+  font-size: 0.65rem;
   font-weight: 600;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -601,8 +610,8 @@
   align-items: center;
   gap: 6px;
   margin: 11px 0 0;
-  color: #788091;
-  font-size: 0.52rem;
+  color: var(--color-text-secondary);
+  font-size: 0.62rem;
 }
 
 .studio-editor__status span {
@@ -621,9 +630,9 @@
   gap: 15px;
   padding-inline: 12px;
   border-top: 1px solid rgb(255 255 255 / 6%);
-  color: #667080;
+  color: var(--color-muted);
   font-family: var(--font-code);
-  font-size: 0.45rem;
+  font-size: 0.58rem;
 }
 
 .hero__scroll {
@@ -1115,10 +1124,33 @@
 }
 
 .tech-marquee__note {
-  color: var(--color-muted);
+  color: var(--color-text-secondary);
   font-family: var(--font-code);
-  font-size: 0.51rem;
+  font-size: 0.62rem;
   letter-spacing: 0.1em;
+}
+
+.tech-marquee__toggle {
+  padding: 6px 12px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 999px;
+  background: rgb(22 24 31 / 70%);
+  color: var(--color-text-secondary);
+  font: inherit;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: border-color 180ms ease, color 180ms ease, background-color 180ms ease;
+}
+
+.tech-marquee__toggle:hover {
+  border-color: var(--color-accent-light);
+  background: rgb(139 92 246 / 12%);
+  color: var(--color-text);
+}
+
+.tech-marquee__toggle:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
 }
 
 .tech-marquee__viewport {
@@ -1130,7 +1162,13 @@
 }
 
 .tech-marquee__viewport:hover .tech-marquee__track,
-.tech-marquee__viewport:focus-within .tech-marquee__track {
+.tech-marquee__viewport:focus-within .tech-marquee__track,
+.tech-marquee__heading:hover + .tech-marquee__viewport .tech-marquee__track,
+.tech-marquee__heading:focus-within + .tech-marquee__viewport .tech-marquee__track {
+  animation-play-state: paused;
+}
+
+.tech-marquee.is-paused .tech-marquee__track {
   animation-play-state: paused;
 }
 
@@ -1329,66 +1367,4 @@
 
 .site-footer__top:hover {
   color: var(--color-accent-light);
-}
-
-.custom-cursor {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  display: none;
-  width: 0;
-  height: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 180ms ease;
-}
-
-.custom-cursor__halo,
-.custom-cursor__dot {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.custom-cursor__halo {
-  width: 38px;
-  height: 38px;
-  border: 1px solid rgb(167 139 250 / 42%);
-  background: rgb(139 92 246 / 8%);
-  box-shadow: 0 0 24px rgb(139 92 246 / 17%);
-  transition: width 220ms ease, height 220ms ease, border-color 220ms ease, background 220ms ease, box-shadow 220ms ease;
-}
-
-.custom-cursor__dot {
-  width: 5px;
-  height: 5px;
-  background: #d9c9ff;
-  box-shadow: 0 0 12px rgb(167 139 250 / 85%);
-}
-
-.custom-cursor.is-active .custom-cursor__halo {
-  width: 58px;
-  height: 58px;
-  border-color: rgb(196 181 253 / 75%);
-  background: rgb(139 92 246 / 13%);
-  box-shadow: 0 0 32px rgb(139 92 246 / 30%);
-}
-
-body.has-custom-cursor,
-body.has-custom-cursor a,
-body.has-custom-cursor button {
-  cursor: none;
-}
-
-body.has-custom-cursor .custom-cursor {
-  display: block;
-}
-
-body.has-custom-cursor .custom-cursor.is-visible {
-  opacity: 1;
 }

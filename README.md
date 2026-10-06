@@ -19,13 +19,14 @@ Portafolio personal de Ángel Orlando Briceño Chacón, desarrollador frontend e
 
 ## Decisiones de diseño y rendimiento
 
-- Diseño responsive, con HTML semántico, navegación por teclado y menú móvil accesible.
+- Diseño responsive, con HTML semántico, enlace para saltar al contenido, navegación por teclado, foco visible y menú móvil accesible.
 - Tema oscuro con fondo `#0d0e12`, superficies glassmorphism y acentos morados `#8b5cf6` / `#a78bfa`.
 - La ventana de código integra el retrato con máscara degradada, una terminal typewriter y un widget de concentración.
 - La navegación presenta la formación técnica, el proyecto Interclases LJV y la proyección profesional hacia Quipux.
 - Los logos de LJV, UPB y Quipux se sirven localmente; los fondos claros de origen se preparan con transparencia cuando aplica.
-- El cursor Lerp se activa solo con puntero fino y respeta `prefers-reduced-motion`; las animaciones de entrada usan `IntersectionObserver`.
-- La cinta infinita utiliza iconos Devicon y pausa al pasar el cursor; las tecnologías siguen legibles si el CDN no está disponible.
+- El spotlight ambiental sigue suavemente el puntero fino sin ocultar el cursor nativo; se desactiva en dispositivos táctiles y al activar `prefers-reduced-motion`.
+- La cinta de ocho tecnologías utiliza iconos Devicon, se pausa al pasar el cursor y ofrece un control de pausa accesible; con movimiento reducido queda detenida.
+- Las animaciones de entrada usan `IntersectionObserver`, y el efecto de escritura presenta el texto completo sin animación cuando el sistema solicita movimiento reducido.
 - CSS y JavaScript están separados; Inter y DM Mono se sirven desde Google Fonts, Devicon desde jsDelivr. El sitio no requiere un proceso de compilación.
 
 ## Ejecutar localmente

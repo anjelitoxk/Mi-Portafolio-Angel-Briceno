@@ -5,8 +5,8 @@
   --color-surface-solid: #16181f;
   --color-surface-raised: #1c1f28;
   --color-text: #f1f3f9;
-  --color-text-secondary: #94a3b8;
-  --color-muted: #647084;
+  --color-text-secondary: #a8b2c2;
+  --color-muted: #94a3b8;
   --color-accent: #8b5cf6;
   --color-accent-light: #a78bfa;
   --color-border: rgb(255 255 255 / 8%);
@@ -54,10 +54,11 @@ body::after {
 body::before {
   inset: 0;
   background-image:
+    var(--spotlight-layer, radial-gradient(300px circle at 50vw 35vh, transparent, transparent 74%)),
     radial-gradient(rgb(255 255 255 / 8%) 1px, transparent 1px),
     radial-gradient(ellipse at 16% 20%, rgb(139 92 246 / 11%), transparent 35%),
     radial-gradient(ellipse at 83% 66%, rgb(139 92 246 / 8%), transparent 32%);
-  background-size: 28px 28px, 100% 100%, 100% 100%;
+  background-size: 100% 100%, 28px 28px, 100% 100%, 100% 100%;
   animation: star-twinkle 10s ease-in-out infinite alternate;
 }
 
@@ -85,12 +86,12 @@ body::after {
 @keyframes star-twinkle {
   from {
     opacity: 0.5;
-    background-position: 0 0, 0 0, 0 0;
+    background-position: 0 0, 0 0, 0 0, 0 0;
   }
 
   to {
     opacity: 1;
-    background-position: 12px -8px, 0 0, 0 0;
+    background-position: 0 0, 12px -8px, 0 0, 0 0;
   }
 }
 
@@ -114,7 +115,7 @@ button {
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-accent-light);
+  outline: 2px solid #8b5cf6;
   outline-offset: 4px;
 }
 
@@ -134,13 +135,13 @@ button {
   top: 12px;
   left: 12px;
   padding: 10px 14px;
-  transform: translateY(-160%);
+  transform: translateY(calc(-100% - 16px));
   border-radius: 8px;
   background: var(--color-text);
   color: var(--color-bg);
 }
 
-.skip-link:focus {
+.skip-link:focus-visible {
   transform: translateY(0);
 }
 
@@ -265,12 +266,12 @@ button {
 }
 
 .button--primary {
-  background: linear-gradient(120deg, #8b5cf6, #7043d2);
+  background: linear-gradient(120deg, #7043d2, #623ab0);
   color: #fff;
 }
 
 .button--primary:hover {
-  background: linear-gradient(120deg, #a78bfa, #8058e7);
+  background: linear-gradient(120deg, #623ab0, #5730a9);
   box-shadow: 0 9px 30px rgb(139 92 246 / 35%);
 }
 
